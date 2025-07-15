@@ -1,2 +1,2 @@
-metaapi_cloud_sdk
-python-dotenv
+metaapi-cloud-sdk
+aiohttp

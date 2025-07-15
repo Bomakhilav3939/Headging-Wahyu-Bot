@@ -1,17 +1,19 @@
-# EA Grid Hedging - MetaAPI + Render
+# EA Hedging EURUSD (5 Pip Grid)
 
-## Strategi
-- Pair: EURUSD
-- Grid jarak: 5 pip
-- Take Profit: 5 pip
-- Lot tetap: 0.01
-- Buka BUY dan SELL bersamaan, tutup saat TP tercapai
+Strategi hedging otomatis menggunakan MetaApi (MT4) + notifikasi Telegram.
 
-## Cara Jalankan (di Render.com)
-1. Upload file ke GitHub repo (main.py + requirements.txt)
-2. Buat Web Service di Render.com
-3. Build command: `pip install -r requirements.txt`
-4. Start command: `python main.py`
-5. Tambahkan Environment Variable:
-   - `TOKEN`: token dari metaapi.cloud
-   - `ACCOUNT_ID`: account ID dari akun MT4 kamu
+## 📌 Strategi
+- Buka BUY + SELL di EURUSD setiap 5 pip
+- TP 5 pip masing-masing
+- Jika salah satu TP, buka BUY+SELL ulang
+
+## 🚀 Deploy ke Railway
+1. Buat project di Railway
+2. Tambahkan environment variables (lihat `.env.example`)
+3. Deploy dan aktifkan
+
+## 🛠️ File Penting
+- `main.py` = logika utama
+- `telegram_notifier.py` = notifikasi sinyal
+- `requirements.txt` = dependensi Python
+- `Procfile` = supaya Railway tahu cara menjalankan bot
