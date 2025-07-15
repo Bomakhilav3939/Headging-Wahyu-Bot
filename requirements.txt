@@ -1,1 +1,2 @@
 metaapi_cloud_sdk
+python-dotenv
